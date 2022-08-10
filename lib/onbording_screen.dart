@@ -34,7 +34,7 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
               i = index;
             });
           },
-          children: <Widget>[
+          children: const <Widget>[
             IntroPage1(),
             IntroPage2(),
             IntroPage3(),
@@ -93,7 +93,8 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
                                 Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>  whats_new_screen()));
+                                        builder: (context) =>
+                                            const whats_new_screen()));
                               },
                             ),
                           )

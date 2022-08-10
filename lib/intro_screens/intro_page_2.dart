@@ -1,18 +1,41 @@
 import 'package:flutter/material.dart';
 
 class IntroPage2 extends StatelessWidget {
+  const IntroPage2({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Color.fromARGB(255, 64, 75, 81),
-      child: const Center(
-        child: Text(
-          'Page 2',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-          ),
+    return  Container(
+      color: const Color.fromARGB(255, 64, 75, 81),
+      child: Center(
+        child: Column(
+          children: [
+            const Spacer(),
+            Image.asset(
+              'images/screen2.png',
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'Title',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Text(
+              'Lorem Ipsum is simply dummy text of the printing and typeset',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+              ),
+            ),
+            const Spacer(),
+          ],
         ),
       ),
     );
