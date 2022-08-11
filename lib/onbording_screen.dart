@@ -53,7 +53,7 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
               ),
               const SizedBox(height: 50),
               Container(
-                alignment: const Alignment(0, 0.75),
+                alignment: const Alignment(0, 0.70),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -94,7 +94,7 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const whats_new_screen()));
+                                            const WhatsNew()));
                               },
                             ),
                           )

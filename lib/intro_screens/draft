@@ -1,0 +1,67 @@
+import 'package:flutter/material.dart';
+import 'package:onbording/intro_screens/main_screen.dart';
+import 'package:onbording/main.dart';
+
+// ignore: camel_case_types
+class whats_new_screen extends StatelessWidget {
+  const whats_new_screen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      // extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => const MyApp()));
+            },
+            icon: const Icon(Icons.close_sharp),
+            padding: const EdgeInsets.all(5),
+            iconSize: 30,
+          ),
+        ],
+      ),
+      body: Container(
+        color: const Color.fromARGB(255, 64, 75, 81),
+        //main row
+        child: Column(
+          children: [
+            //header
+            Padding(
+              padding:
+                  // const EdgeInsets.symmetric(vertical: 100, horizontal: 20),
+              child: Row(
+                children: const [
+                  Image(image: AssetImage('images/wn.png')),
+                  SizedBox(width: 20, height: 20),
+                  Text(
+                    'Whats New?',
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            SafeArea(
+              //Text in save Area
+              child: Column(),
+            ),
+
+            //button
+            const Padding(
+              padding: EdgeInsets.all(20),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
