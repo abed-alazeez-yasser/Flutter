@@ -4,7 +4,7 @@ import 'package:onbording/intro_screens/intro_page_2.dart';
 import 'package:onbording/intro_screens/intro_page_3.dart';
 import 'package:onbording/intro_screens/whats_new_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
+//commit 13/8/2022
 void main() {
   runApp(const OnbordingScreen());
 }
