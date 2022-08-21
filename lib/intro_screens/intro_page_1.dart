@@ -11,8 +11,8 @@ class IntroPage1 extends StatelessWidget {
         child: Column(
           children: [
             const Spacer(),
-            Image.asset(
-              'images/screen1.png',
+             Image.asset(
+              'assets/images/screen1.png',
             ),
             const SizedBox(height: 20),
             const Text(

@@ -12,7 +12,7 @@ class IntroPage2 extends StatelessWidget {
           children: [
             const Spacer(),
             Image.asset(
-              'images/screen2.png',
+              'assets/images/screen2.png',
             ),
             const SizedBox(height: 20),
             const Text(
