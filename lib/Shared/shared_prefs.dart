@@ -16,7 +16,7 @@ class SharedPrefs {
     prefs?.setBool(_isFirstOpenApp, true);
   }
 
-  bool getIsFirstOpenApp(){
-   return prefs?.getBool(_isFirstOpenApp) ?? false;
+  bool getIsFirstOpenApp() {
+    return prefs?.getBool(_isFirstOpenApp) ?? true;
   }
 }

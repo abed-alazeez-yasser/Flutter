@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class DarkMode extends StatelessWidget {
   const DarkMode({Key? key}) : super(key: key);
@@ -8,41 +9,48 @@ class DarkMode extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 64, 75, 81),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         title: const Text('Dark Mode'),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.arrow_back),
-          )
+            onPressed: () {
+              Navigator.pushNamed(context, '/new_note_screen');
+            },
+            icon: SvgPicture.asset(
+              'assets/svgs/arrow-right.svg',
+              color: Colors.white,
+              width: 25,
+            ),
+          ),
         ],
       ),
       body: Column(
         children: [
-          const SizedBox(
-            height: 30,
-          ),
           RadioListTile(
-            title: const Text('Enabel'),
+            title: const Text(
+              'Enabel',
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
             value: 'E',
             groupValue: 'E',
             onChanged: (value) {},
           ),
-          const SizedBox(
-            height: 16,
-          ),
           RadioListTile(
-            title: const Text('Disable'),
-            value: 'D',
+            title: const Text(
+              'Disable',
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+            value: 'E',
             groupValue: 'D',
             onChanged: (value) {},
           ),
-          const SizedBox(
-            height: 16,
-          ),
           RadioListTile(
-            title: const Text('System Setting'),
-            value: 'S',
+            title: const Text(
+              'System Setting',
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+            value: 'E',
             groupValue: 'S',
             onChanged: (value) {},
           )

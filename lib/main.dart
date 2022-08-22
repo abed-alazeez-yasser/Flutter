@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:onbording/Shared/shared_prefs.dart';
+import 'package:onbording/app_screens/dark_mode.dart';
 import 'package:onbording/app_screens/lanuch_screen.dart';
 import 'package:onbording/app_screens/main_screen.dart';
+import 'package:onbording/app_screens/new_note_screen.dart';
 import 'package:onbording/app_screens/setting_screen.dart';
 import 'package:onbording/intro_screens/onbording_screen.dart';
 
@@ -23,9 +25,11 @@ class MyApp extends StatelessWidget {
       initialRoute: '/lanuch_screen',
       routes: {
         '/lanuch_screen': (context) => const LanuchScreen(),
-        '/main_screen': (context) => const MainScreen(),
         '/on_boarding_screen': (context) => const Intro(),
+        '/main_screen': (context) => const MainScreen(),
         '/setting_screen': (context) => const SettingScreen(),
+        '/dark_screen': (context) => const DarkMode(),
+        '/new_note_screen': (context) => const NewNote(),
       },
       home: const Intro(),
     );

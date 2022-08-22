@@ -12,7 +12,7 @@ class _LanuchScreenState extends State<LanuchScreen> {
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushNamed(context, getInitRoute());
+      Navigator.pushReplacementNamed(context, getInitRoute());
     });
   }
 
@@ -49,10 +49,10 @@ class _LanuchScreenState extends State<LanuchScreen> {
   }
 
   String getInitRoute() {
-    if (!SharedPrefs.instance.getIsFirstOpenApp()) {
+    if (SharedPrefs.instance.getIsFirstOpenApp() == false) {
       return '/on_boarding_screen';
     } else {
-      return '/main_screen';
+      return '/setting_screen';
     }
   }
 }
