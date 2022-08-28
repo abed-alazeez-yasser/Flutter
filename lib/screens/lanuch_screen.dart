@@ -11,11 +11,12 @@ class LanuchScreen extends StatefulWidget {
 class _LanuchScreenState extends State<LanuchScreen> {
   @override
   void initState() {
+    super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacementNamed(context, getInitRoute());
     });
   }
-
+@override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(

@@ -115,7 +115,7 @@ class WhatsNew extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (context) =>  MainScreen()));
+                          builder: (context) => const  MainScreen()));
                 },
                 style: ElevatedButton.styleFrom(
                   primary: const Color.fromARGB(255, 39, 48, 55),

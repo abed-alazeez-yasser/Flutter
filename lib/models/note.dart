@@ -9,7 +9,7 @@ class Note {
   }
 
   Map<String, dynamic> toMap() {
-    Map<String, dynamic> map = Map<String, dynamic>();
+    Map<String, dynamic> map =  Map<String, dynamic>();
     map['content'] = content;
     return map;
   }

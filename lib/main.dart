@@ -49,7 +49,7 @@ class MyMaterialApp extends StatelessWidget {
       routes: {
         '/lanuch_screen': (context) => const LanuchScreen(),
         '/on_boarding_screen': (context) => const Intro(),
-        '/main_screen': (context) => MainScreen(),
+        '/main_screen': (context) => const  MainScreen(),
         '/setting_screen': (context) => const SettingScreen(),
         '/dark_screen': (context) => const DarkMode(),
         '/add_note_screen': (context) => const AddNotes(),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-//commit 13/8/2022
 class SettingScreen extends StatelessWidget {
   const SettingScreen({Key? key}) : super(key: key);
 
@@ -12,6 +11,7 @@ class SettingScreen extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
+        elevation: 0,
         title: const Text('More Setting'),
         actions: [
           IconButton(
@@ -32,16 +32,18 @@ class SettingScreen extends StatelessWidget {
           ListTile(
             title: Row(
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset('assets/svgs/dark.svg',
-                      color: Colors.white, width: 25),
+                SvgPicture.asset('assets/svgs/dark.svg',
+                    color: Colors.white, width: 25),
+                const SizedBox(
+                  width: 10,
                 ),
                 const Text('More Setting',
                     style: TextStyle(fontSize: 20, color: Colors.white)),
               ],
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/dark_screen');
+            },
           ),
           const Divider(
             color: Colors.grey,
@@ -50,16 +52,18 @@ class SettingScreen extends StatelessWidget {
           ListTile(
             title: Row(
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset('assets/svgs/google.svg',
-                      color: Colors.white, width: 25),
+                SvgPicture.asset('assets/svgs/google.svg',
+                    color: Colors.white, width: 25),
+                const SizedBox(
+                  width: 10,
                 ),
                 const Text('Other apps',
                     style: TextStyle(fontSize: 20, color: Colors.white)),
               ],
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/dark_screen');
+            },
           ),
           const Divider(
             color: Colors.grey,
@@ -68,16 +72,18 @@ class SettingScreen extends StatelessWidget {
           ListTile(
             title: Row(
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset('assets/svgs/telephone.svg',
-                      color: Colors.white, width: 25),
+                SvgPicture.asset('assets/svgs/telephone.svg',
+                    color: Colors.white, width: 25),
+                const SizedBox(
+                  width: 10,
                 ),
                 const Text('Contact Us',
                     style: TextStyle(fontSize: 20, color: Colors.white)),
               ],
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/dark_screen');
+            },
           ),
         ],
       ),
