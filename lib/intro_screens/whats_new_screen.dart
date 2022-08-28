@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:onbording/app_screens/main_screen.dart';
+import 'package:onbording/screens/main_screen.dart';
 import 'package:onbording/main.dart';
 
 class WhatsNew extends StatelessWidget {
@@ -115,7 +115,7 @@ class WhatsNew extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const MainScreen()));
+                          builder: (context) =>  MainScreen()));
                 },
                 style: ElevatedButton.styleFrom(
                   primary: const Color.fromARGB(255, 39, 48, 55),

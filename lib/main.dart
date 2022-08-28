@@ -1,21 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:onbording/Shared/shared_prefs.dart';
-import 'package:onbording/app_screens/dark_mode.dart';
-import 'package:onbording/app_screens/lanuch_screen.dart';
-import 'package:onbording/app_screens/main_screen.dart';
-import 'package:onbording/app_screens/new_note_screen.dart';
-import 'package:onbording/app_screens/setting_screen.dart';
+import 'package:onbording/providers/note_provider.dart';
+import 'package:onbording/screens/add_notes_screen.dart';
+import 'package:onbording/screens/dark_mode.dart';
+import 'package:onbording/screens/lanuch_screen.dart';
+import 'package:onbording/screens/main_screen.dart';
+import 'package:onbording/screens/setting_screen.dart';
 import 'package:onbording/intro_screens/onbording_screen.dart';
+import 'package:onbording/storages/db/db_provider.dart';
+import 'package:provider/provider.dart';
 
 //commit 13/8/2022
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await SharedPrefs.instance.initPrefs();
+  await DbProvider().initDb();
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<NoteProvider>(create: (_) => NoteProvider()),
+      ],
+      builder: (context, child) {
+        return const MyMaterialApp();
+      },
+    );
+  }
+}
+
+class MyMaterialApp extends StatelessWidget {
+  const MyMaterialApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +49,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/lanuch_screen': (context) => const LanuchScreen(),
         '/on_boarding_screen': (context) => const Intro(),
-        '/main_screen': (context) => const MainScreen(),
+        '/main_screen': (context) => MainScreen(),
         '/setting_screen': (context) => const SettingScreen(),
         '/dark_screen': (context) => const DarkMode(),
-        '/new_note_screen': (context) => const NewNote(),
+        '/add_note_screen': (context) => const AddNotes(),
       },
       home: const Intro(),
     );
