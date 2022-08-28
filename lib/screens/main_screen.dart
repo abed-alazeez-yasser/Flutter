@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onbording/Helpers/helpers.dart';
 import 'package:onbording/providers/note_provider.dart';
@@ -15,7 +14,6 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> with Helpers {
   // final ScrollController _scrollController = ScrollController();
-
   @override
   void initState() {
     super.initState();
@@ -168,6 +166,7 @@ class _MainScreenState extends State<MainScreen> with Helpers {
   }
 }
 
+//alert dialog devloper in app bar
 class DevAlert extends StatelessWidget {
   const DevAlert({Key? key}) : super(key: key);
 

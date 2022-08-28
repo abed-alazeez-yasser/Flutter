@@ -37,7 +37,7 @@ class SettingScreen extends StatelessWidget {
                 const SizedBox(
                   width: 10,
                 ),
-                const Text('More Setting',
+                const Text('Dart Setting',
                     style: TextStyle(fontSize: 20, color: Colors.white)),
               ],
             ),

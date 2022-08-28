@@ -29,6 +29,7 @@ class _AddNotesState extends State<AddNotes> with Helpers {
 
   @override
   Widget build(BuildContext context) {
+    DateTime? _dateTime;
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 64, 75, 81),
       appBar: AppBar(
@@ -52,7 +53,18 @@ class _AddNotesState extends State<AddNotes> with Helpers {
             child: Row(
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(2022),
+                      lastDate: DateTime(2023),
+                    ).then((date) {
+                      setState(() {
+                        _dateTime = date;
+                      });
+                    });
+                  },
                   icon: SvgPicture.asset(
                     'assets/svgs/alarm.svg',
                     color: Colors.white,
