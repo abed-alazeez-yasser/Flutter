@@ -16,7 +16,8 @@ class _LanuchScreenState extends State<LanuchScreen> {
       Navigator.pushReplacementNamed(context, getInitRoute());
     });
   }
-@override
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -53,7 +54,7 @@ class _LanuchScreenState extends State<LanuchScreen> {
     if (SharedPrefs.instance.getIsFirstOpenApp() == false) {
       return '/on_boarding_screen';
     } else {
-      return '/setting_screen';
+      return '/main_screen';
     }
   }
 }

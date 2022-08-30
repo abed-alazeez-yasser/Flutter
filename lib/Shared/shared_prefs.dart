@@ -13,7 +13,7 @@ class SharedPrefs {
   }
 
   Future<void> setIsFirstOpenApp() async {
-    prefs?.setBool(_isFirstOpenApp, true);
+    prefs?.setBool(_isFirstOpenApp, false);
   }
 
   bool getIsFirstOpenApp() {
